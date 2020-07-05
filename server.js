@@ -14,8 +14,14 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 app.use(express.static("public"));
+// localhost
+// mongoose.connect("mongodb://localhost/budget", {
+//   useNewUrlParser: true,
+//   useFindAndModify: false,
+//   useUnifiedTopology: true 
+// });
 
-mongoose.connect("mongodb://localhost/budget", {
+mongoose.connect(process.env.MONGODB_URI || "mongodb://user1:password1@ds229108.mlab.com:29108/heroku_0pz5x2hm", {
   useNewUrlParser: true,
   useFindAndModify: false,
   useUnifiedTopology: true 
