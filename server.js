@@ -3,7 +3,7 @@ const logger = require("morgan");
 const mongoose = require("mongoose");
 const compression = require("compression");
 
-const PORT = 8080;
+const PORT = process.env.PORT || 8080;
 
 const app = express();
 
@@ -21,9 +21,9 @@ app.use(express.static("public"));
 //   useUnifiedTopology: true 
 // });
 
-mongoose.connect(process.env.MONGODB_URI || "mongodb://user1:password1@ds229108.mlab.com:29108/heroku_0pz5x2hm", {
+mongoose.connect(process.env.MONGODB_URI || "mongodb://user1:password1@ds229108.mlab.com:29108/heroku_0pz5x2hm", 
+{
   useNewUrlParser: true,
-  useFindAndModify: false,
   useUnifiedTopology: true 
 });
 
