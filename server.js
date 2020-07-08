@@ -20,7 +20,7 @@ app.use(express.static("public"));
 //   useFindAndModify: false,
 //   useUnifiedTopology: true 
 // });
-
+// HEROKU CONNECTION
 mongoose.connect(process.env.MONGODB_URI || "mongodb://user1:password1@ds229108.mlab.com:29108/heroku_0pz5x2hm", 
 {
   useNewUrlParser: true,
