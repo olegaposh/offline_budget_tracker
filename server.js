@@ -21,7 +21,7 @@ app.use(express.static("public"));
 //   useUnifiedTopology: true 
 // });
 // HEROKU CONNECTION
-mongoose.connect(process.env.MONGODB_URI || "mongodb://user1:password1@ds229108.mlab.com:29108/heroku_0pz5x2hm", 
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost:27017/budget", 
 {
   useNewUrlParser: true,
   useUnifiedTopology: true 
