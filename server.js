@@ -14,12 +14,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 app.use(express.static("public"));
-// localhost
-// mongoose.connect("mongodb://localhost/budget", {
-//   useNewUrlParser: true,
-//   useFindAndModify: false,
-//   useUnifiedTopology: true 
-// });
+
 // HEROKU CONNECTION
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost:27017/budget", 
 {
